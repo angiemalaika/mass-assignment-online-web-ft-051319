@@ -12,4 +12,11 @@ class Person
 :wrist_size, :glove_size, :pant_length, :pant_width
   end
 
+class User
+  attr_accessor :name, :user_name, :age, :location, :bio
+ 
+  def initialize(attributes)
+    attributes.each {|key, value| self.send(("#{key}="), value)}
+  end
+end
 end
